@@ -1,6 +1,14 @@
-const handler = (req: Request) => {
+import getHealthcheckCollaboration from "../application/collaborations/get-healthcheck";
 
-  return new Response(`Bun! ${req.url}`);
+const handler = (req: Request) => {
+  const requestURL = new URL(req.url);
+
+  if (requestURL.pathname === '/healthcheck') {
+    const res = getHealthcheckCollaboration();
+    return new Response(res, { status: 200 });
+  }
+
+  return new Response('Not found', { status: 404 });
 }
 
 export default handler;
