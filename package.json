@@ -13,5 +13,9 @@
   },
   "peerDependencies": {
     "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "@elysiajs/swagger": "^0.6.1",
+    "elysia": "^0.6.20"
   }
 }

@@ -1,10 +1,5 @@
-import handler from './infrastructure/handler';
+import * as server from './infrastructure/server';
 
-const server = Bun.serve({
-  port: process.env.PORT || 3000,
-  fetch(req) {
-    return handler(req);
-  },
-});
+const port = Number(process.env.PORT) || 3000;
 
-console.log(`Listening on http://localhost:${server.port} ...`);
+server.run(port);
