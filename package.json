@@ -1,7 +1,10 @@
 {
   "name": "bun-world",
-  "module": "index.ts",
+  "module": "src/index.ts",
   "type": "module",
+  "scripts": {
+    "dev": "bun run src/index.ts"
+  },
   "devDependencies": {
     "bun-types": "latest"
   },
