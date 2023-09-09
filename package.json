@@ -6,7 +6,7 @@
     "dev": "bun --watch src/index.ts",
     "start": "bun run src/index.ts",
     "test": "bun test",
-    "binary": "bun build --compile ./src/index.ts --outfile=app"
+    "binary": "bun build --compile ./src/index.ts --outfile=bin/app"
   },
   "devDependencies": {
     "bun-types": "latest"
