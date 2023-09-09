@@ -1,7 +1,9 @@
+import handler from './infrastructure/handler';
+
 const server = Bun.serve({
-  port: 3000,
+  port: process.env.PORT || 3000,
   fetch(req) {
-    return new Response(`Bun! ${req.url}`);
+    return handler(req);
   },
 });
 
