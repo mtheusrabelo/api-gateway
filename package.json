@@ -5,7 +5,8 @@
   "scripts": {
     "dev": "bun --watch src/index.ts",
     "start": "bun run src/index.ts",
-    "test": "bun test"
+    "test": "bun test",
+    "binary": "bun build --compile ./src/index.ts --outfile=app"
   },
   "devDependencies": {
     "bun-types": "latest"
